@@ -1,10 +1,14 @@
-function Navbar() {
+import { NavLink } from "react-router-dom";
+
+export default function NavBar(){
 
     return (
-    <div> 
-        <h2>Navbar</h2>
-    </div>
-    );
-}; 
+        <div>
+            <NavLink to="/">Home Page</NavLink>
+            <NavLink to="foovies">Foovies</NavLink>
+            <NavLink to="droovies">Droovies</NavLink>
+            <NavLink to="seriment">Seriment</NavLink>
 
-export default Navbar
+        </div>
+    )
+}

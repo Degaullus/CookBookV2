@@ -1,21 +1,42 @@
 import { useState } from 'react'
 import './App.css'
-import Header from "./components/Header"
-import Title from './components/Title'
+import {Routes, Route} from "react-router-dom"
+import HomePage from './components/HomePage'
+import NavBar from './components/NavBar'
+import Foovies from './components/Foovies'
+import Droovies from './components/Droovies'
+import Seriment from './components/Seriment'
+import FooviesRecipes from './components/FooviesRecipes'
+import Error from './components/Error'
 import Footer from './components/Footer'
-import Hero from './components/Hero'
-import Main from './components/Main'
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
+
 
   return (
     <>
-      <Header />
-      <Title />
-      <Hero />
-      <Main />
-      <Footer />
+      <NavBar />
+      
+          <Routes>
+            <Route path="/" element={<HomePage/>} />
+            <Route path="foovies" element={<Foovies/>} />
+            <Route path="fooviesrecipes/:" element={<FooviesRecipes/>} />
+            <Route path="droovies" element={<Droovies/>} />
+            <Route path="seriment" element={<Seriment/>} />
+            
+            <Route path="*" element={<Error/>} />
+            
+            
+          
+            
+            
+          </Routes>
+
+          <Footer />
     </>
   )
 }
