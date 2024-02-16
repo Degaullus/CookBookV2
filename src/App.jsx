@@ -6,6 +6,8 @@ import NavBar from './components/NavBar'
 import Foovies from './components/Foovies'
 import Droovies from './components/Droovies'
 import Seriment from './components/Seriment'
+import SerimentRecipe from './components/SerimentRecipe'
+
 import FooviesRecipes from './components/FooviesRecipes'
 import Error from './components/Error'
 import Footer from './components/Footer'
@@ -24,10 +26,12 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage/>} />
             <Route path="foovies" element={<Foovies/>} />
-            <Route path="fooviesrecipes/:" element={<FooviesRecipes/>} />
+            
             <Route path="droovies" element={<Droovies/>} />
             <Route path="seriment" element={<Seriment/>} />
-            
+             
+       <Route path="/seriment/:title" element={<SerimentRecipe/>} />   
+
             <Route path="*" element={<Error/>} />
             
             

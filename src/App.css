@@ -1,0 +1,38 @@
+
+/* Header  */
+
+.navBar {
+    display: flex;
+    border: solid black 2px;
+    align-items: center;
+   
+}
+
+.navContainer {
+    display: flex;
+    margin-left: auto;
+    column-gap: 10px;
+    margin-right: 10px;
+}
+
+#logoNav {
+    margin-left: 10px;
+}
+
+/* Footer : */
+.footer {
+    display: flex;
+    border: solid black 2px;
+    align-items: center;
+
+}
+
+.copyright {
+   height: 100px;
+    margin-left: auto;
+}
+
+#logoFooter {
+    display: flex;
+    margin-left: auto;
+}

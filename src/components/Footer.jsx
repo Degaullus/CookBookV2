@@ -1,10 +1,14 @@
+import LogoFooter from "./Logo"
+import Copyright from "./copyright"
 
 
 export default function Footer(){
 
     return (
-        <div>
-            <p>Space for footer</p>
+        <div className="footer">
+        
+            <Copyright />
+            <LogoFooter/>
         </div>
     )
 }
