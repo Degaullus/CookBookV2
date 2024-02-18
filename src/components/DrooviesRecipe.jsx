@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Item.module.css";
 
-export default function SerimentRecipe() {
+export default function DrooviesRecipe() {
   const { title } = useParams();
 
   /*    const urlTitle = unescape(title) */

@@ -1,0 +1,14 @@
+.title {
+  background-color: red;
+}
+
+.categoryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.categoryImg {
+  width: 200px;
+}
