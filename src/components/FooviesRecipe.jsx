@@ -2,7 +2,7 @@ import { ApiContext } from "../context/ApiContext";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 
-export default function SerimentRecipe() {
+export default function FoovieRecipe() {
   const { title } = useParams();
 
   /*    const urlTitle = unescape(title) */
@@ -11,8 +11,6 @@ export default function SerimentRecipe() {
   const recipe = recipes.find(
     (selectedDish) => decodeURIComponent(selectedDish.fields.title) == title
   ); //using decodeURIComponent allows to read the url without the20% (GPT)
-
-  console.log(recipe);
 
   return (
     <div>

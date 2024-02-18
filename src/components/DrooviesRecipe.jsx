@@ -2,7 +2,7 @@ import { ApiContext } from "../context/ApiContext";
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 
-export default function SerimentRecipe() {
+export default function DrooviesRecipe() {
   const { title } = useParams();
 
   /*    const urlTitle = unescape(title) */
