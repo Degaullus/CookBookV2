@@ -12,9 +12,10 @@ export default function SerimentRecipe() {
   const recipe = recipes.find(
     (selectedDish) => decodeURIComponent(selectedDish.fields.title) == title
   ); //using decodeURIComponent allows to read the url without the20% (GPT)
-
-  console.log(recipe);
-
+  if (!recipe) {
+    // Data is not yet available, you can render a loading message or return null
+    return <div>Loading...</div>;
+  }
   return (
     <div>
       <h1 className={styles.title}>{recipe.fields.title}</h1>
