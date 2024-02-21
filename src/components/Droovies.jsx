@@ -23,7 +23,7 @@ export default function Droovies() {
               alt="recipe"
             />
           </Link>
-          <p>{recipe.fields.fugu}</p>
+          <p>{recipe.fields.comfyFugu}</p>
         </div>
       ))}
     </div>

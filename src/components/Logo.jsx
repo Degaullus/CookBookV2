@@ -3,7 +3,7 @@ export default function Logo() {
     return (
         <div>
             
-            <p id="logoNav">Logo here</p>
+            <img id="logoNav" src="/public/MMMlogo.png"></img>
         </div>
     )
 }
