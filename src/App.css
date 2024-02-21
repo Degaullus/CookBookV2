@@ -1,39 +1,105 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
 /* Header  */
-
+body {
+  background-color: #ecc101;
+  width: 1024px;
+  margin: auto;
+}
 .navBar {
-    display: flex;
-    border: solid black 2px;
-    align-items: center;
-   
+  display: flex;
+  border: solid white 5px;
+  border-radius: 5px;
+  align-items: center;
+  background-color: #861d14;
+  padding: 10px;
+  margin: 5px;
+}
+
+.navBarLink {
+  background-color: #ecc101;
+  text-decoration: none;
+  border: solid white 2px;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 30px;
+}
+
+.navBarLink:hover {
+  background-color: #861d14;
+  color: #ecc101;
+  scale: 120%;
+  transition: 500ms;
 }
 
 .navContainer {
-    display: flex;
-    margin-left: auto;
-    column-gap: 10px;
-    margin-right: 10px;
+  display: flex;
+  margin-left: auto;
+  column-gap: 10px;
+  margin-right: 10px;
 }
 
 #logoNav {
-    margin-left: 10px;
-    width: 50px;
+  margin-left: 10px;
+  width: 50px;
 }
 
 /* Footer : */
 .footer {
-    display: flex;
-    border: solid black 2px;
-    align-items: center;
-
+  display: flex;
+  border: solid white 5px;
+  align-items: center;
+  background-color: #861d14;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
 }
 
 .copyright {
-   height: 100px;
-    margin-left: auto;
+  height: 100px;
+  margin-left: auto;
 }
 
 #logoFooter {
-    display: flex;
-    margin-left: auto;
+  display: flex;
+  margin-left: auto;
+}
+
+/* FONT SIZE PLUS NAMES */
+/* .barlow-condensed-regular {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-medium {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .barlow-condensed-bold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  } 
+  
+  .abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+h2 {
+  font-size: 5rem;
+}
+
+h1 {
+  font-size: 3rem;
 }
