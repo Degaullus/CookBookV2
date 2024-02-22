@@ -32,40 +32,51 @@ export default function DrooviesRecipe() {
   return (
     <div className={styles.mainRecipeContainer}>
       <div>
-        <h1 className={styles.title}>{recipe.fields.title}</h1>
-        <h2 className={styles.subTitle}>{recipe.fields.subtitle}</h2>
-        <h2 className={styles.comfyFugu}>{recipe.fields.comfyFugu}</h2>
+        <div className={styles.title}>
+          <h1>{recipe.fields.title}</h1>
+          <p className={styles.subTitle}>{recipe.fields.subtitle}</p>
+        </div>
+        <div className={styles.comfyFuguContainer}>
+          <h2 className={styles.comfyFuguText}>- SPECIAL EFFECTS -</h2>
+          <p className={styles.comfyFuguRating}>{recipe.fields.comfyFugu}</p>
+        </div>
       </div>
 
-      <div className={styles.containerGrid}>
-        <div className={styles.containerIngredients}>
-          <h2>Ingredients</h2>
-          <pre className={styles.ingredients}>{recipe.fields.ingredients}</pre>
+      <div>
+        <div className={styles.topRecipeContainer}>
+          <img
+            className={styles.recipeImg}
+            src={recipe.fields.image.fields.file.url}
+            alt=""
+          />
+
+          <div className={styles.containerIngredients}>
+            <h2>Ingredients</h2>
+            <pre className={styles.ingredients}>
+              {recipe.fields.ingredients}
+            </pre>
+            <p className={styles.recipePreparationTime}>
+              Time ⏱️
+              <br /> {recipe.fields.time}
+            </p>
+          </div>
         </div>
-
-        <img
-          className={styles.recipeImg}
-          src={recipe.fields.image.fields.file.url}
-          alt=""
-        />
-
-        <p className={styles.recipePreparationTime}>
-          Preparation Time ⏱️
-          <br /> {recipe.fields.time}
-        </p>
-
-        <p className={styles.preparationRecipe}>
-          Preparation <br /> {recipe.fields.preparation}
-        </p>
-
-        <img
-          className={styles.recipeSourceImg}
-          src={recipe.fields.sourceImg.fields.file.url}
-          alt={recipe.fields.sourceImg.fields.title}
-        />
-        <h4>{recipe.fields.source}</h4>
-        <p>{recipe.fields.sourceSub}</p>
-        <p>{recipe.fields.aboutThat}</p>
+        <div className={styles.preparationRecipe}>
+          <h2 className={styles.preparationTitle}>- Preparation -</h2>
+          <pre className={styles.preparationText}>
+            {recipe.fields.preparation}
+          </pre>
+        </div>
+        <div className={styles.bottomRecipeContainer}>
+          <img
+            className={styles.recipeSourceImg}
+            src={recipe.fields.sourceImg.fields.file.url}
+            alt={recipe.fields.sourceImg.fields.title}
+          />
+          <h4>{recipe.fields.source}</h4>
+          <p>{recipe.fields.sourceSub}</p>
+          <p>{recipe.fields.aboutThat}</p>
+        </div>
       </div>
     </div>
   );
