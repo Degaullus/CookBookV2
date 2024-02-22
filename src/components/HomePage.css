@@ -33,14 +33,17 @@
   }
 
   .overtitleHomePage{
-    color: white;
+    color: rgb(255, 253, 253);
     position: absolute;
     top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1; 
-  font-size: 80px;
+  font-size: 100px;
   font-family: "Abril Fatface", serif ;
+  -webkit-text-stroke: 1px black; /* Webkit/Blink browsers */
+  text-stroke: 1px black;
+  
   }
 
   .eatingsoonHomepage{
@@ -67,7 +70,7 @@
   }
 
   .videoHomepage{
-    padding: 15px;
+    padding-left: 15px;
     border-radius: 4%;
   }
 

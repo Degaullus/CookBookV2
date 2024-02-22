@@ -49,26 +49,6 @@ body {
   width: 50px;
 }
 
-/* Footer : */
-.footer {
-  display: flex;
-  border: solid white 5px;
-  align-items: center;
-  background-color: #861d14;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 5px;
-}
-
-.copyright {
-  height: 100px;
-  margin-left: auto;
-}
-
-#logoFooter {
-  display: flex;
-  margin-left: auto;
-}
 
 /* FONT SIZE PLUS NAMES */
 /* .barlow-condensed-regular {
@@ -102,4 +82,52 @@ h2 {
 
 h1 {
   font-size: 3rem;
+}
+
+/* copyright */
+.copyright {
+  border: white 1px solid;
+}
+
+.AboutUs {
+  border: white 1px solid;
+
+}
+
+.socialMedia{
+  border: white 1px solid;
+}
+
+/* Footer : */
+.footer {
+  font-size: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border: solid white 5px;
+  align-items: center;
+  background-color: #861d14;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+
+
+.underFooter {
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.copyright {
+  height: 100px;
+  margin-left: auto;
+}
+
+#logoFooter {
+  display: flex;
+  margin-left: auto;
+  
 }
