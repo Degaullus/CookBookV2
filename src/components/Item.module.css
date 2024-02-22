@@ -4,10 +4,11 @@
 .title {
   background-color: #861d14;
   border: solid white 5px;
-  border-radius: 5px;
+  border-radius: 25px;
   color: white;
   padding: 4.5rem;
-  margin: 2rem;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
   text-align: center;
 }
 
@@ -24,7 +25,7 @@
   background-color: #694204;
   color: white;
   border: solid white 5px;
-  border-radius: 5px;
+  border-radius: 25px;
   margin-bottom: 1rem;
 }
 
@@ -71,6 +72,26 @@
   border: solid white 5px;
   border-radius: 25px;
   align-self: center;
+
+  --g: 4px; /* the gap */
+  --b: 12px; /* border thickness*/
+  --c: #861d14; /* the color */
+
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+  background: var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+    var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b), var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: 0.3s;
+}
+
+.recipeImg:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
 }
 
 .recipePreparationTime {
@@ -81,6 +102,11 @@
   border-radius: 25px;
   margin: 2rem;
   font-size: 3rem;
+}
+
+.recipePreparationTime:hover {
+  transition: 500ms;
+  scale: 120%;
 }
 
 .preparationTitle {
