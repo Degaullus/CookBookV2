@@ -9,8 +9,10 @@ export default function Footer() {
         <LogoFooter />
       <div className="underFooter"> 
         <Copyright />
+        <div className="verticalLineFooter"></div>
       
         <ABoutUs/>
+        <div className="verticalLineFooter"></div>
         <SocialMedia />
       </div>
 
