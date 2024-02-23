@@ -22,11 +22,12 @@ body {
 
 .navBarLink {
   background-color: #ecc101;
+  color:  #861d14;
   text-decoration: none;
   border: solid white 2px;
   border-radius: 5px;
   padding: 10px;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Abril Fatface", serif;
   font-size: 30px;
 }
 
@@ -49,26 +50,6 @@ body {
   width: 50px;
 }
 
-/* Footer : */
-.footer {
-  display: flex;
-  border: solid white 5px;
-  align-items: center;
-  background-color: #861d14;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 5px;
-}
-
-.copyright {
-  height: 100px;
-  margin-left: auto;
-}
-
-#logoFooter {
-  display: flex;
-  margin-left: auto;
-}
 
 /* FONT SIZE PLUS NAMES */
 /* .barlow-condensed-regular {
@@ -102,4 +83,85 @@ h2 {
 
 h1 {
   font-size: 3rem;
+}
+
+/* copyright */
+.copyright {
+
+}
+
+.AboutUs {
+
+  width: 500px;
+  text-align: center;
+  margin-left: 30px;
+
+}
+
+.socialMedia{
+  text-align: center;
+
+}
+
+/* Footer : */
+.footer {
+  font-size: 13px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border: solid white 5px;
+  align-items: center;
+  background-color: #861d14;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+
+
+
+.underFooter {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.copyright {
+  height: 100px;
+  margin-left: auto;
+  text-align: center;
+}
+
+#logoFooter {
+  display: flex;
+  margin-left: auto;
+}
+
+.titleFooter {
+  font-size: 16px;
+  font-family: "Abril Fatface", serif;
+  margin-bottom: 10px;
+}
+
+.textFooter {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.logoSocialFooter {
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: transform 0.2s ease-in-out; /* Add transition for smooth animation */
+}
+
+.logoSocialFooter:hover {
+  transform: scale(2); /* Scale by 15% on hover */
+}
+
+.verticalLineFooter {
+  border-left:  solid white 1px;
+  margin-bottom: 50px;
+
 }
