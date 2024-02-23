@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
+import HorrorComedyToggle from "./HorrorComedyToggle";
 
 export default function NavBar() {
   return (
@@ -18,6 +19,7 @@ export default function NavBar() {
         <NavLink className="navBarLink" to="seriment">
           Seriment
         </NavLink>
+        <HorrorComedyToggle />
       </div>
     </div>
   );

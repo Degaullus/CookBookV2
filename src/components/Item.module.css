@@ -1,3 +1,217 @@
+.mainRecipeContainer {
+  width: 1024px;
+}
 .title {
-  background-color: green;
+  background-color: #861d14;
+  border: solid white 5px;
+  border-radius: 25px;
+  color: white;
+  padding: 4.5rem;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+  text-align: center;
+}
+
+.subTitle {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.comfyFuguContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #694204;
+  color: white;
+  border: solid white 5px;
+  border-radius: 25px;
+  margin-bottom: 1rem;
+}
+
+.comfyFuguText {
+  text-align: center;
+  font-family: "Abril Fatface", serif;
+  font-size: 3.5rem;
+}
+
+.comfyFuguRating {
+  font-size: 3rem;
+}
+
+.topRecipeContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.containerIngredients {
+  background-color: #694204;
+  color: white;
+  font-size: 1rem;
+  border: solid white 5px;
+  border-radius: 25px;
+  padding: 1rem;
+  margin: 1rem;
+  width: fit-content;
+  text-align: center;
+  height: auto;
+  font-family: "Abril Fatface", serif;
+}
+
+.ingredients {
+  padding: 1rem;
+  line-height: 2.5rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2rem;
+  position: relative;
+}
+
+.recipeImg {
+  width: 20rem;
+  height: 30rem;
+  border: solid white 5px;
+  border-radius: 25px;
+  align-self: center;
+
+  --g: 4px; /* the gap */
+  --b: 12px; /* border thickness*/
+  --c: #861d14; /* the color */
+
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+  background: var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+    var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b), var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: 0.3s;
+}
+
+.recipeImg:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+
+.recipePreparationTime {
+  background-color: #861d14;
+  color: white;
+  border: solid white 5px;
+  text-align: center;
+  border-radius: 25px;
+  margin: 2rem;
+  font-size: 3rem;
+}
+
+.recipePreparationTime:hover {
+  transition: 500ms;
+  scale: 120%;
+}
+
+.preparationTitle {
+  font-family: "Abril Fatface", serif;
+  text-align: center;
+}
+
+.preparationText {
+  font-family: "Barlow Condensed", sans-serif;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.preparationRecipe {
+  background-color: #861d14;
+  color: white;
+  border: solid white 5px;
+  border-radius: 25px;
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomRecipeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.sourceImageContainer {
+  width: 30rem;
+  position: relative;
+}
+
+.sourceImage {
+  width: 100%;
+  display: block;
+  margin: auto;
+  border: solid white 5px;
+  border-radius: 25px;
+}
+
+.source {
+  width: 30rem;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.6s;
+  border-radius: 25px;
+  margin-left: 5px;
+}
+
+.source:hover {
+  opacity: 1;
+}
+
+.source h2 {
+  font-size: 55px;
+  font-family: "Abril Fatface", serif;
+  text-align: center;
+  color: white;
+}
+
+.source > * {
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+
+.source:hover > * {
+  transform: translateY(0px);
+}
+
+.aboutThat {
+  background-color: #694204;
+  color: white;
+  font-size: 2rem;
+  border: solid white 5px;
+  border-radius: 25px;
+  margin-top: -2rem;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.easterEggImg {
+  width: auto;
+  height: auto;
+}
+
+.popcornIngredients {
+  font-size: 3rem;
+}
+
+.ciakPreparation {
+  font-size: 3rem;
+  text-align: center;
 }
