@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Item.module.css";
 import { Circles } from "react-loader-spinner";
+import { HorrorComedyContext } from "../context/HorrorComedyContext";
 
 export default function DrooviesRecipe() {
   const { title } = useParams();
@@ -19,7 +20,7 @@ export default function DrooviesRecipe() {
       <Circles
         height="1200"
         width="1200"
-        color="#4fa94d"
+        color="#861d14"
         ariaLabel="circles-loading"
         wrapperStyle={{}}
         wrapperClass=""
@@ -28,15 +29,25 @@ export default function DrooviesRecipe() {
     );
   }
 
-  console.log(recipe);
+  const { isComedyTheme, comedy, horror, toggleTheme } =
+    useContext(HorrorComedyContext);
+
+  const themeStyles = isComedyTheme ? comedy : horror;
+
   return (
     <div className={styles.mainRecipeContainer}>
       <div>
-        <div className={styles.title}>
+        <div
+          style={{ color: themeStyles.text, background: themeStyles.uiOne }}
+          className={styles.title}
+        >
           <h1>{recipe.fields.title}</h1>
           <p className={styles.subTitle}>{recipe.fields.subtitle}</p>
         </div>
-        <div className={styles.comfyFuguContainer}>
+        <div
+          style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
+          className={styles.comfyFuguContainer}
+        >
           <h2 className={styles.comfyFuguText}>- SPECIAL EFFECTS -</h2>
           <p className={styles.comfyFuguRating}>{recipe.fields.comfyFugu}</p>
         </div>
@@ -50,18 +61,27 @@ export default function DrooviesRecipe() {
             alt=""
           />
 
-          <div className={styles.containerIngredients}>
+          <div
+            style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
+            className={styles.containerIngredients}
+          >
             <h2>Ingredients</h2>
             <pre className={styles.ingredients}>
               {recipe.fields.ingredients}
             </pre>
-            <p className={styles.recipePreparationTime}>
+            <p
+              style={{ color: themeStyles.text, background: themeStyles.uiOne }}
+              className={styles.recipePreparationTime}
+            >
               Time ⏱️
               <br /> {recipe.fields.time}
             </p>
           </div>
         </div>
-        <div className={styles.preparationRecipe}>
+        <div
+          style={{ color: themeStyles.text, background: themeStyles.uiOne }}
+          className={styles.preparationRecipe}
+        >
           <h2 className={styles.preparationTitle}>- Preparation -</h2>
           <pre className={styles.preparationText}>
             {recipe.fields.preparation}
@@ -80,7 +100,10 @@ export default function DrooviesRecipe() {
               </div>
             </div>
           </div>
-          <div className={styles.aboutThat}>
+          <div
+            style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
+            className={styles.aboutThat}
+          >
             <p>{recipe.fields.aboutThat}</p>
           </div>
         </div>

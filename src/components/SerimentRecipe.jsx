@@ -33,6 +33,8 @@ export default function SerimentRecipe() {
     useContext(HorrorComedyContext);
 
   const themeStyles = isComedyTheme ? comedy : horror;
+
+  //EASTER EGG
   const easterEgg = isComedyTheme ? null : (
     <div>
       <button>🥚</button>
