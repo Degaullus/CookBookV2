@@ -68,19 +68,22 @@ export default function DrooviesRecipe() {
           </pre>
         </div>
         <div>
-          <div>
-            <img
-              src={recipe.fields.sourceImg.fields.file.url}
-              alt={recipe.fields.sourceImg.fields.title}
-            />
+          <div className={styles.bottomRecipeContainer}>
+            <div className={styles.sourceImageContainer}>
+              <img
+                className={styles.sourceImage}
+                src={recipe.fields.sourceImg.fields.file.url}
+                alt={recipe.fields.sourceImg.fields.title}
+              />
+              <div className={styles.source}>
+                <h2>{recipe.fields.source}</h2>
+              </div>
+            </div>
           </div>
-          <div>
-            <h4>{recipe.fields.source}</h4>
-            <span>{recipe.fields.sourceSub}</span>
+          <div className={styles.aboutThat}>
+            <p>{recipe.fields.aboutThat}</p>
           </div>
         </div>
-
-        <p>{recipe.fields.aboutThat}</p>
       </div>
     </div>
   );

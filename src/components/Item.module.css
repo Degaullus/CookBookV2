@@ -67,7 +67,7 @@
 }
 
 .recipeImg {
-  width: auto;
+  width: 20rem;
   height: 30rem;
   border: solid white 5px;
   border-radius: 25px;
@@ -134,14 +134,70 @@
 
 .bottomRecipeContainer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  /* height: 100vh; */
 }
 
-.recipeSourceImg {
-  width: 50rem;
-  height: auto;
+.sourceImageContainer {
+  width: 30rem;
+  position: relative;
+}
+
+.sourceImage {
+  width: 100%;
+  display: block;
+  margin: auto;
   border: solid white 5px;
   border-radius: 25px;
-  margin: 1rem;
+}
+
+.source {
+  width: 30rem;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.6s;
+  border-radius: 25px;
+  margin-left: 5px;
+}
+
+.source:hover {
+  opacity: 1;
+}
+
+.source h2 {
+  font-size: 55px;
+  font-family: "Abril Fatface", serif;
+  text-align: center;
+  color: white;
+}
+
+.source > * {
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+
+.source:hover > * {
+  transform: translateY(0px);
+}
+
+.aboutThat {
+  background-color: #694204;
+  color: white;
+  font-size: 2rem;
+  border: solid white 5px;
+  border-radius: 25px;
+  margin-top: -2rem;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  font-family: "Barlow Condensed", sans-serif;
 }
