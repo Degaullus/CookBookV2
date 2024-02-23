@@ -20,7 +20,7 @@ export default function SerimentRecipe() {
       <Circles
         height="1200"
         width="1200"
-        color="#4fa94d"
+        color="#861d14"
         ariaLabel="circles-loading"
         wrapperStyle={{}}
         wrapperClass=""
