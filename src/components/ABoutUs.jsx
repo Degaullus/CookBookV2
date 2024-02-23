@@ -10,6 +10,14 @@ export default function ABoutUs() {
                 <br />
                 Germany
             </p>
+            <div className="socialBoxFooter">
+    <img  className="logoSocialFooter" src="./public/facebook.png" alt="fb logo" />
+    <img  className="logoSocialFooter" src="./public/telegramm.png" alt="fb logo" />
+    <img  className="logoSocialFooter" src="./public/instagram.png" alt="fb logo" />
+    <img  className="logoSocialFooter" src="./public/tumbler.png" alt="fb logo" />
+
+    </div>
+
         
         </div>
     )

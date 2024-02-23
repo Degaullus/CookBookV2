@@ -7,7 +7,7 @@ export default function HomePage() {
         <div>
             
             <div className="TitlePicHomepage">
-                    <h1 className="overtitleHomePage">Proodly Presents</h1>
+                    <h1 className="overtitleHomePage">Proudly Presents</h1>
                     <img className="popcornHomepage" src="/public/popcorn.webp" alt="popcirn pic" />
                     <img className="eatingsoonHomepage" src="/public/comingsoon Yellow.png" alt="eating pic" />
             </div>

@@ -151,8 +151,8 @@ h1 {
 }
 
 .logoSocialFooter {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   transition: transform 0.2s ease-in-out; /* Add transition for smooth animation */
 }
 
