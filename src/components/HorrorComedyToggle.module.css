@@ -1,0 +1,16 @@
+.themeToggle {
+  background-color: #ecc101;
+  text-decoration: none;
+  border: solid white 2px;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 30px;
+}
+
+.themeToggle:hover {
+  background-color: #861d14;
+  color: #ecc101;
+  scale: 120%;
+  transition: 500ms;
+}
