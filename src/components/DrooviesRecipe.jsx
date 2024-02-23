@@ -66,6 +66,7 @@ export default function DrooviesRecipe() {
             className={styles.containerIngredients}
           >
             <h2>Ingredients</h2>
+            <div className={styles.popcornIngredients}>🍿</div>
             <pre className={styles.ingredients}>
               {recipe.fields.ingredients}
             </pre>
@@ -83,6 +84,8 @@ export default function DrooviesRecipe() {
           className={styles.preparationRecipe}
         >
           <h2 className={styles.preparationTitle}>- Preparation -</h2>
+          <div className={styles.ciakPreparation}>🎬</div>
+
           <pre className={styles.preparationText}>
             {recipe.fields.preparation}
           </pre>

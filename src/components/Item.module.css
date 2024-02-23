@@ -206,3 +206,12 @@
   width: auto;
   height: auto;
 }
+
+.popcornIngredients {
+  font-size: 3rem;
+}
+
+.ciakPreparation {
+  font-size: 3rem;
+  text-align: center;
+}
