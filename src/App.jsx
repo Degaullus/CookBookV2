@@ -10,10 +10,19 @@ import Error from "./components/Error";
 import Footer from "./components/Footer";
 import FooviesRecipe from "./components/FooviesRecipe";
 import DrooviesRecipe from "./components/DrooviesRecipe";
+import { HorrorComedyContext } from "./context/HorrorComedyContext";
+import { useContext } from "react";
 
 function App() {
+
+  const { isComedyTheme, comedy, horror, toggleTheme } =
+    useContext(HorrorComedyContext);
+
+  const themeStyles = isComedyTheme ? comedy : horror;
+
+
   return (
-    <>
+    <div style={{ color: themeStyles.text, background: themeStyles.navLink }}>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -26,7 +35,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
