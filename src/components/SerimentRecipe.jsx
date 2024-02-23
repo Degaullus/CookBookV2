@@ -1,5 +1,5 @@
 import { ApiContext } from "../context/ApiContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Item.module.css";
 import { Circles } from "react-loader-spinner";
@@ -33,6 +33,16 @@ export default function SerimentRecipe() {
     useContext(HorrorComedyContext);
 
   const themeStyles = isComedyTheme ? comedy : horror;
+  const easterEgg = isComedyTheme ? null : (
+    <div>
+      <button>🥚</button>
+    </div>
+  );
+
+  const [isEasterEgg, setIsEasterEgg] = useState(false);
+  const toggleEasterEgg = () => {
+    setIsEasterEgg(!isEasterEgg);
+  };
 
   console.log(recipe);
   return (
@@ -107,6 +117,16 @@ export default function SerimentRecipe() {
           >
             <p>{recipe.fields.aboutThat}</p>
           </div>
+        </div>
+        <div onClick={toggleEasterEgg}>
+          {isEasterEgg ? (
+            <img
+              className={styles.easterEggImg}
+              src="https://donotwatchthismovie.files.wordpress.com/2018/03/it.jpg?w=816"
+              alt=""
+            />
+          ) : null}
+          {easterEgg}
         </div>
       </div>
     </div>
