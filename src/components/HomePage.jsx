@@ -19,7 +19,9 @@ const themeStyles = isComedyTheme ? comedy : horror;
             <div className="TitlePicHomepage">
                     <h1 className="overtitleHomePage">Proudly Presents</h1>
                     <img className="popcornHomepage" src="/public/popcorn.webp" alt="popcirn pic" />
-                    <img className="eatingsoonHomepage" src="/public/comingsoon Yellow.png" alt="eating pic" />
+                    {/* RENDER PICTURE BUT JUST ON THEME */}
+                    {isComedyTheme && <img className="eatingsoonHomepage" src="/public/comingsoon Yellow.png" alt="eating pic" />}
+                    {/* <img className="eatingsoonHomepage" src="/public/comingsoon Yellow.png" alt="eating pic" /> */}
             </div>
           
             
