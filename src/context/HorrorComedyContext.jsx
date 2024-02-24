@@ -10,15 +10,14 @@ export default function HorrorComedyContextProvider(props) {
     backgroundMain: "#ecc101",
     uiOne: "#861d14",
     uiTwo: "#694204",
-  
   });
 
   const [horror, setHorror] = useState({
     text: "#eee",
     backgroundMain: "#000000",
     uiOne: "#000",
-    uiTwo: "#ea1212",
-    navLink:"black",
+    uiTwo: "#000",
+    navLink: "black",
   });
 
   const toggleTheme = () => {

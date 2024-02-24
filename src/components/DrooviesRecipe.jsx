@@ -1,12 +1,13 @@
 import { ApiContext } from "../context/ApiContext";
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import styles from "./Item.module.css";
 import { Circles } from "react-loader-spinner";
 import { HorrorComedyContext } from "../context/HorrorComedyContext";
 
 export default function DrooviesRecipe() {
   const { title } = useParams();
+  const navigate = useNavigate();
 
   /*    const urlTitle = unescape(title) */
   const { recipes } = useContext(ApiContext);
@@ -62,7 +63,7 @@ export default function DrooviesRecipe() {
           />
 
           <div
-            style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
+            style={{ color: themeStyles.text, background: themeStyles.uiOne }}
             className={styles.containerIngredients}
           >
             <h2>Ingredients</h2>
@@ -71,7 +72,7 @@ export default function DrooviesRecipe() {
               {recipe.fields.ingredients}
             </pre>
             <p
-              style={{ color: themeStyles.text, background: themeStyles.uiOne }}
+              style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
               className={styles.recipePreparationTime}
             >
               Time ⏱️
@@ -109,6 +110,15 @@ export default function DrooviesRecipe() {
           >
             <p>{recipe.fields.aboutThat}</p>
           </div>
+        </div>
+        <div className={styles.containerBackToAll}>
+          <button
+            style={{ color: themeStyles.text, background: themeStyles.uiOne }}
+            className={styles.buttonBackToAll}
+            onClick={() => navigate("/droovies")}
+          >
+            ⬅️ Back to all Droovies!
+          </button>
         </div>
       </div>
     </div>
