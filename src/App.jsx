@@ -11,18 +11,25 @@ import Footer from "./components/Footer";
 import FooviesRecipe from "./components/FooviesRecipe";
 import DrooviesRecipe from "./components/DrooviesRecipe";
 import { HorrorComedyContext } from "./context/HorrorComedyContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 function App() {
+  const { isComedyTheme, comedy, horror } = useContext(HorrorComedyContext);
 
-  const { isComedyTheme, comedy, horror, toggleTheme } =
-    useContext(HorrorComedyContext);
+  useEffect(() => {
+    // MODIFICATION BACKGROUND BODY COLOR.  Update body background color based on the selected theme
+    document.body.style.backgroundColor = isComedyTheme ? comedy.navLink : horror.navLink;
+
+    // Cleanup effect
+    return () => {
+      document.body.style.backgroundColor = ""; // Restore default background color
+    };
+  }, [isComedyTheme, comedy.navLink, horror.navLink]);
 
   const themeStyles = isComedyTheme ? comedy : horror;
 
-
   return (
-    <div style={{ color: themeStyles.text, background: themeStyles.navLink }}>
+    <div style={{ color: themeStyles.text }}>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -40,5 +47,3 @@ function App() {
 }
 
 export default App;
-
-// Mothership command console OR the virgin Maria console
