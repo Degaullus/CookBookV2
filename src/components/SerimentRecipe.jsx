@@ -114,7 +114,7 @@ export default function SerimentRecipe() {
             </div>
           </div>
           <div
-            style={{ color: themeStyles.text, background: themeStyles.uitwo }}
+            style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
             className={styles.aboutThat}
           >
             <p>{recipe.fields.aboutThat}</p>

@@ -23,7 +23,7 @@ body {
 
 .navBarLink {
   background-color: #ecc101;
-  color:  #861d14;
+  color: #861d14;
   text-decoration: none;
   border: solid white 2px;
   border-radius: 5px;
@@ -50,7 +50,6 @@ body {
   margin-left: 10px;
   width: 50px;
 }
-
 
 /* FONT SIZE PLUS NAMES */
 /* .barlow-condensed-regular {
@@ -88,20 +87,16 @@ h1 {
 
 /* copyright */
 .copyright {
-
 }
 
 .AboutUs {
-
   width: 500px;
   text-align: center;
   margin-left: 30px;
-
 }
 
-.socialMedia{
+.socialMedia {
   text-align: center;
-
 }
 
 /* Footer : */
@@ -117,8 +112,6 @@ h1 {
   padding: 10px;
   margin: 5px;
 }
-
-
 
 .underFooter {
   display: flex;
@@ -162,7 +155,6 @@ h1 {
 }
 
 .verticalLineFooter {
-  border-left:  solid white 1px;
+  border-left: solid white 1px;
   margin-bottom: 50px;
-
 }
