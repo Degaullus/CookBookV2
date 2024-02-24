@@ -1,14 +1,56 @@
+.cotegoryHero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .title {
-  background-color: red;
+  display: none;
+  text-align: center;
+
 }
 
 .categoryContainer {
+  margin: 3rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  width: 90%;
+
 }
 
+.categoryContainer:nth-child(odd) {
+ /* justify-content: flex-start;*/ 
+  flex-direction: row; 
+}
+.categoryContainer:nth-child(even) {
+  /*justify-content: flex-end;*/
+    flex-direction: row-reverse;  
+}
+
+
 .categoryImg {
-  width: 200px;
+  height: 15rem;
+  border: 5px solid white;
+  border-radius: 25px;
+}
+#foodTitleContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+#foodTitleContainerItem {
+  border: 5px solid white;
+  border-radius: 25px;
+  background-color: #861d14;
+  padding: .5rem;
+}
+#nameOnCat {
+  font-family: Abril Fatface;
+  color: white;
+  font-size: 2rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+#fuguIndex {
+  text-align: center;
+  font-size: 1rem;
 }

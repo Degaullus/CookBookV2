@@ -11,19 +11,23 @@ export default function Seriment() {
   );
 
   return (
-    <div>
+    <div className={styles.categoryHero}>
       <h2 className={styles.title}>Seriment Recipes</h2>
       {seriments.map((recipe) => (
         <div key={recipe.fields.title} className={styles.categoryContainer}>
           <Link to={`/seriment/${recipe.fields.title}`}>
-            <h2>{recipe.fields.title}</h2>
             <img
               className={styles.categoryImg}
               src={recipe.fields.image.fields.file.url}
               alt="recipe"
             />
           </Link>
-          <p>{recipe.fields.comfyFugu}</p>
+          <div id={styles.foodTitleContainer}>
+            <div id={styles.foodTitleContainerItem}>  
+              <h2 id={styles.nameOnCat}>{recipe.fields.title}</h2>
+              <p id={styles.fuguIndex}>{recipe.fields.comfyFugu}</p>
+            </div>
+          </div>
         </div>
       ))}
     </div>
