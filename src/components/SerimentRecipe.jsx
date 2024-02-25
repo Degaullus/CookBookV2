@@ -1,13 +1,13 @@
 import { ApiContext } from "../context/ApiContext";
 import { useContext, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import styles from "./Item.module.css";
 import { Circles } from "react-loader-spinner";
 import { HorrorComedyContext } from "../context/HorrorComedyContext";
 
 export default function SerimentRecipe() {
   const { title } = useParams();
-
+  const navigate = useNavigate();
   /*    const urlTitle = unescape(title) */
   const { recipes } = useContext(ApiContext);
 
@@ -37,7 +37,7 @@ export default function SerimentRecipe() {
   //EASTER EGG
   const easterEgg = isComedyTheme ? null : (
     <div>
-      <button>🥚</button>
+      <button style={{ fontSize: "50px" }}>🥚</button>
     </div>
   );
 
@@ -75,7 +75,7 @@ export default function SerimentRecipe() {
           />
 
           <div
-            style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
+            style={{ color: themeStyles.text, background: themeStyles.uiOne }}
             className={styles.containerIngredients}
           >
             <h2>Ingredients</h2>
@@ -83,7 +83,7 @@ export default function SerimentRecipe() {
               {recipe.fields.ingredients}
             </pre>
             <p
-              style={{ color: themeStyles.text, background: themeStyles.uiOne }}
+              style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
               className={styles.recipePreparationTime}
             >
               Time ⏱️
@@ -129,6 +129,15 @@ export default function SerimentRecipe() {
             />
           ) : null}
           {easterEgg}
+        </div>
+        <div className={styles.containerBackToAll}>
+          <button
+            style={{ color: themeStyles.text, background: themeStyles.uiOne }}
+            className={styles.buttonBackToAll}
+            onClick={() => navigate("/seriment")}
+          >
+            ⬅️ Back to all Seriments!
+          </button>
         </div>
       </div>
     </div>

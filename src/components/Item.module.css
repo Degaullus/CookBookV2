@@ -105,8 +105,8 @@
 }
 
 .recipePreparationTime:hover {
-  transition: 500ms;
-  scale: 120%;
+  transition: ease-in 800ms;
+  scale: 110%;
 }
 
 .preparationTitle {
@@ -197,7 +197,7 @@
   border: solid white 5px;
   border-radius: 25px;
   margin-top: -2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   padding: 3rem;
   font-family: "Barlow Condensed", sans-serif;
 }
@@ -214,4 +214,27 @@
 .ciakPreparation {
   font-size: 3rem;
   text-align: center;
+}
+
+.containerBackToAll {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonBackToAll {
+  background-color: #861d14;
+  color: white;
+  border: solid white 5px;
+  border-radius: 25px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  font-family: "Abril Fatface", serif;
+}
+
+.buttonBackToAll:hover {
+  scale: 110%;
+  transition: ease-in 800ms;
 }
