@@ -4,8 +4,9 @@
   border: solid white 2px;
   border-radius: 5px;
   padding: 10px;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Abril Fatface", serif;
   font-size: 30px;
+
 }
 
 .themeToggle:hover {
@@ -13,4 +14,5 @@
   color: #ecc101;
   scale: 120%;
   transition: 500ms;
+  cursor: pointer;
 }
