@@ -15,7 +15,7 @@ export default function Droovies() {
       <h2 className={styles.title}>Droovies Recipes</h2>
       {droovies.map((recipe) => (
         <div key={recipe.fields.title} className={styles.categoryContainer}>
-          <Link to={`/droovie/${recipe.fields.title}`}>
+          <Link to={`/droovies/${recipe.fields.title}`}>
             <img
               className={styles.categoryImg}
               src={recipe.fields.image.fields.file.url}
@@ -23,7 +23,7 @@ export default function Droovies() {
             />
           </Link>
           <div id={styles.foodTitleContainer}>
-            <div id={styles.foodTitleContainerItem}>  
+            <div id={styles.foodTitleContainerItem}>
               <h2 id={styles.nameOnCat}>{recipe.fields.title}</h2>
               <p id={styles.fuguIndex}>{recipe.fields.comfyFugu}</p>
             </div>

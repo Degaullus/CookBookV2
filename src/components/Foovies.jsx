@@ -15,7 +15,7 @@ export default function Foovies() {
       <h2 className={styles.title}>Foovies Recipes</h2>
       {foovies.map((recipe) => (
         <div key={recipe.fields.title} className={styles.categoryContainer}>
-          <Link to={`/foovie/${recipe.fields.title}`}>
+          <Link to={`/foovies/${recipe.fields.title}`}>
             <img
               className={styles.categoryImg}
               src={recipe.fields.image.fields.file.url}
@@ -23,7 +23,7 @@ export default function Foovies() {
             />
           </Link>
           <div id={styles.foodTitleContainer}>
-            <div id={styles.foodTitleContainerItem}>  
+            <div id={styles.foodTitleContainerItem}>
               <h2 id={styles.nameOnCat}>{recipe.fields.title}</h2>
               <p id={styles.fuguIndex}>{recipe.fields.comfyFugu}</p>
             </div>
