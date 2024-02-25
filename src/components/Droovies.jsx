@@ -11,19 +11,23 @@ export default function Droovies() {
   );
 
   return (
-    <div>
+    <div className={styles.categoryHero}>
       <h2 className={styles.title}>Droovies Recipes</h2>
       {droovies.map((recipe) => (
         <div key={recipe.fields.title} className={styles.categoryContainer}>
-          <Link to={`/droovies/${recipe.fields.title}`}>
-            <h2>{recipe.fields.title}</h2>
+          <Link to={`/droovie/${recipe.fields.title}`}>
             <img
               className={styles.categoryImg}
               src={recipe.fields.image.fields.file.url}
               alt="recipe"
             />
           </Link>
-          <p>{recipe.fields.comfyFugu}</p>
+          <div id={styles.foodTitleContainer}>
+            <div id={styles.foodTitleContainerItem}>  
+              <h2 id={styles.nameOnCat}>{recipe.fields.title}</h2>
+              <p id={styles.fuguIndex}>{recipe.fields.comfyFugu}</p>
+            </div>
+          </div>
         </div>
       ))}
     </div>
