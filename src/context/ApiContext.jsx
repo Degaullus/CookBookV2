@@ -9,8 +9,8 @@ export default function ApiContextProvider(props) {
   const [recipes, setRecipes] = useState([]);
   const client = createClient({
     //Api key basicelly.
-    space: "nofxc6cwgjyu",
-    accessToken: "X0DJGCRBFN0dCljCfLAE39242TTYDCAgntA2h-b-_qw",
+    space: import.meta.env.VITE_API_KEY,
+    accessToken: import.meta.env.VITE_ACCESSTOKEN,
   });
 
   //let's fetch this baby
