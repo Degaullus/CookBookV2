@@ -36,6 +36,7 @@
   flex-direction: column;
   margin-left: 2rem;
   margin-right: 2rem;
+  justify-content: center;
 }
 #foodTitleContainerItem {
   border: 5px solid white;
@@ -53,4 +54,22 @@
 #fuguIndex {
   text-align: center;
   font-size: 1rem;
+}
+#containerNaviArrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttonNaviArrows {
+  background-color: #861d14;
+  color: white;
+  border: solid white 5px;
+  border-radius: 25px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  font-family: "Abril Fatface", serif;
 }
