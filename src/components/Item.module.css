@@ -67,8 +67,8 @@
 }
 
 .recipeImg {
-  width: 20rem;
-  height: 30rem;
+  width: 50%;
+  height: 50%;
   border: solid white 5px;
   border-radius: 25px;
   align-self: center;

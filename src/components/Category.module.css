@@ -6,25 +6,22 @@
 .title {
   display: none;
   text-align: center;
-
 }
 
 .categoryContainer {
   margin: 3rem;
   display: flex;
   width: 90%;
-
 }
 
 .categoryContainer:nth-child(odd) {
- /* justify-content: flex-start;*/ 
-  flex-direction: row; 
+  /* justify-content: flex-start;*/
+  flex-direction: row;
 }
 .categoryContainer:nth-child(even) {
   /*justify-content: flex-end;*/
-    flex-direction: row-reverse;  
+  flex-direction: row-reverse;
 }
-
 
 .categoryImg {
   height: 15rem;
@@ -37,19 +34,20 @@
   margin-left: 2rem;
   margin-right: 2rem;
   justify-content: center;
+  text-align: center;
 }
 #foodTitleContainerItem {
   border: 5px solid white;
   border-radius: 25px;
   background-color: #861d14;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 #nameOnCat {
   font-family: Abril Fatface;
   color: white;
   font-size: 2rem;
-  margin-left: .5rem;
-  margin-right: .5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 #fuguIndex {
   text-align: center;

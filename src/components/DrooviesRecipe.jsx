@@ -6,6 +6,8 @@ import { Circles } from "react-loader-spinner";
 import { HorrorComedyContext } from "../context/HorrorComedyContext";
 
 export default function DrooviesRecipe() {
+
+
   const { title } = useParams();
   const navigate = useNavigate();
 
