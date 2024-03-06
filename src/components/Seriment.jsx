@@ -19,7 +19,7 @@ export default function Seriment() {
   return (
     <div className={styles.categoryHero}>
       <h2 className={styles.title}>Seriment Recipes</h2>
-      {seriments.map((recipe) => (
+      {seriments?.map((recipe) => (
         <div key={recipe.id} className={styles.categoryContainer}>
           <Link to={`/seriment/${recipe.title}`}>
             <img
@@ -32,7 +32,7 @@ export default function Seriment() {
             <div id={styles.foodTitleContainerItem}
                  style={{ color: themeStyles.text, background: themeStyles.uiOne }}>  
               <h2 id={styles.nameOnCat}>{recipe.title}</h2>
-              <p id={styles.fuguIndex}>{recipe.fugu}</p>
+              <p id={styles.fuguIndex}>{recipe.fuguji}</p>
             </div>
           </div>
         </div>

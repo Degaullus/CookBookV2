@@ -13,7 +13,7 @@ export default function FoovieRecipe() {
   const { recipes } = useContext(ApiContext);
 
   const recipe = recipes.find(
-    (selectedDish) => decodeURIComponent(selectedDish.fields.title) == title
+    (selectedDish) => decodeURIComponent(selectedDish.title) == title
   ); //using decodeURIComponent allows to read the url without the20% (GPT)
   if (!recipe) {
     // Data is not yet available, you can render a loading message or return null
@@ -31,7 +31,7 @@ export default function FoovieRecipe() {
   }
   const { isComedyTheme, comedy, horror, toggleTheme } =
     useContext(HorrorComedyContext);
-
+//fuck it
   const themeStyles = isComedyTheme ? comedy : horror;
 
   return (
@@ -41,15 +41,15 @@ export default function FoovieRecipe() {
           style={{ color: themeStyles.text, background: themeStyles.uiOne }}
           className={styles.title}
         >
-          <h1>{recipe.fields.title}</h1>
-          <p className={styles.subTitle}>{recipe.fields.subtitle}</p>
+          <h1>{recipe.title}</h1>
+          <p className={styles.subTitle}>{rec__ipe.subtitle}</p>
         </div>
         <div
           style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
           className={styles.comfyFuguContainer}
         >
           <h2 className={styles.comfyFuguText}>- SPECIAL EFFECTS -</h2>
-          <p className={styles.comfyFuguRating}>{recipe.fields.comfyFugu}</p>
+          <p className={styles.comfyFuguRating}>{recipe.fuguji}</p>
         </div>
       </div>
 
@@ -57,7 +57,7 @@ export default function FoovieRecipe() {
         <div className={styles.topRecipeContainer}>
           <img
             className={styles.recipeImg}
-            src={recipe.fields.image.fields.file.url}
+            src={recipe.image}
             alt=""
           />
 
@@ -67,14 +67,14 @@ export default function FoovieRecipe() {
           >
             <h2>Ingredients</h2>
             <pre className={styles.ingredients}>
-              {recipe.fields.ingredients}
+              {recipe.ingred_list}
             </pre>
             <p
               style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
               className={styles.recipePreparationTime}
             >
               Time ⏱️
-              <br /> {recipe.fields.time}
+              <br /> {recipe.prep_time}
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function FoovieRecipe() {
         >
           <h2 className={styles.preparationTitle}>- Preparation -</h2>
           <pre className={styles.preparationText}>
-            {recipe.fields.preparation}
+            {recipe.prep_instr}
           </pre>
         </div>
         <div>
@@ -92,11 +92,11 @@ export default function FoovieRecipe() {
             <div className={styles.sourceImageContainer}>
               <img
                 className={styles.sourceImage}
-                src={recipe.fields.sourceImg.fields.file.url}
-                alt={recipe.fields.sourceImg.fields.title}
+                src={recipe.source_img}
+               
               />
               <div className={styles.source}>
-                <h2>{recipe.fields.source}</h2>
+                <h2>{recipe.source}</h2>
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function FoovieRecipe() {
             style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
             className={styles.aboutThat}
           >
-            <p>{recipe.fields.aboutThat}</p>
+            <p>{recipe.source_about}</p>
           </div>
         </div>
         <div className={styles.containerBackToAll}>

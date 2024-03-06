@@ -18,7 +18,7 @@ export default function Foovies() {
   return (
     <div className={styles.categoryHero}>
       <h2 className={styles.title}>Foovies Recipes</h2>
-      {foovies.map((recipe) => (
+      {foovies?.map((recipe) => (
         <div key={recipe.id} className={styles.categoryContainer}>
           <Link to={`/foovies/${recipe.title}`}>
             <img
@@ -31,7 +31,7 @@ export default function Foovies() {
             <div id={styles.foodTitleContainerItem}
                  style={{ color: themeStyles.text, background: themeStyles.uiOne }}>
               <h2 id={styles.nameOnCat}>{recipe.title}</h2>
-              <p id={styles.fuguIndex}>{recipe.fugu}</p>
+              <p id={styles.fuguIndex}>{recipe.fuguji}</p>
             </div>
           </div>
         </div>

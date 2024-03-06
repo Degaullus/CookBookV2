@@ -15,7 +15,7 @@ export default function DrooviesRecipe() {
   const { recipes } = useContext(ApiContext);
 
   const recipe = recipes.find(
-    (selectedDish) => decodeURIComponent(selectedDish.fields.title) == title
+    (selectedDish) => decodeURIComponent(selectedDish.title) == title
   ); //using decodeURIComponent allows to read the url without the20% (GPT)
   if (!recipe) {
     // Data is not yet available, you can render a loading message or return null
@@ -44,15 +44,15 @@ export default function DrooviesRecipe() {
           style={{ color: themeStyles.text, background: themeStyles.uiOne }}
           className={styles.title}
         >
-          <h1>{recipe.fields.title}</h1>
-          <p className={styles.subTitle}>{recipe.fields.subtitle}</p>
+          <h1>{recipe.title}</h1>
+          <p className={styles.subTitle}>{recipe.subtitle}</p>
         </div>
         <div
           style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
           className={styles.comfyFuguContainer}
         >
           <h2 className={styles.comfyFuguText}>- SPECIAL EFFECTS -</h2>
-          <p className={styles.comfyFuguRating}>{recipe.fields.comfyFugu}</p>
+          <p className={styles.comfyFuguRating}>{recipe.fuguji}</p>
         </div>
       </div>
 
@@ -60,7 +60,7 @@ export default function DrooviesRecipe() {
         <div className={styles.topRecipeContainer}>
           <img
             className={styles.recipeImg}
-            src={recipe.fields.image.fields.file.url}
+            src={recipe.image}
             alt=""
           />
 
@@ -71,14 +71,14 @@ export default function DrooviesRecipe() {
             <h2>Ingredients</h2>
             <div className={styles.popcornIngredients}>🍿</div>
             <pre className={styles.ingredients}>
-              {recipe.fields.ingredients}
+              {recipe.ingred_list}
             </pre>
             <p
               style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
               className={styles.recipePreparationTime}
             >
               Time ⏱️
-              <br /> {recipe.fields.time}
+              <br /> {recipe.prep_time}
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function DrooviesRecipe() {
           <div className={styles.ciakPreparation}>🎬</div>
 
           <pre className={styles.preparationText}>
-            {recipe.fields.preparation}
+            {recipe.prep_instr}
           </pre>
         </div>
         <div>
@@ -98,11 +98,11 @@ export default function DrooviesRecipe() {
             <div className={styles.sourceImageContainer}>
               <img
                 className={styles.sourceImage}
-                src={recipe.fields.sourceImg.fields.file.url}
-                alt={recipe.fields.sourceImg.fields.title}
+                src={recipe.source_img}
+             
               />
               <div className={styles.source}>
-                <h2>{recipe.fields.source}</h2>
+                <h2>{recipe.source}</h2>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function DrooviesRecipe() {
             style={{ color: themeStyles.text, background: themeStyles.uiTwo }}
             className={styles.aboutThat}
           >
-            <p>{recipe.fields.aboutThat}</p>
+            <p>{recipe.source_about}</p>
           </div>
         </div>
         <div className={styles.containerBackToAll}>
