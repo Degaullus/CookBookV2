@@ -4,8 +4,23 @@ import { useEffect } from "react";
 
 export const ApiContext = createContext();
 
+
 export default function ApiContextProvider(props) {
-  // create your STATE here.
+const API = "http://localhost:8080/api/recipes"
+const[recipes, setRecipes] = useState([])
+
+useEffect(() => {
+  const getRecipes = async () => {
+    const res = await fetch(API)
+    const data = await res.json()
+    console.log(data);
+    setRecipes(data); 
+  }
+
+  getRecipes()
+}, []);
+
+/*   // create your STATE here.
   const [recipes, setRecipes] = useState([]);
   const client = createClient({
     //Api key basicelly.
@@ -21,7 +36,7 @@ export default function ApiContextProvider(props) {
       console.log(entryItems.items);
     };
     getRecipes();
-  }, []);
+  }, []); */
 
   return (
     <ApiContext.Provider value={{ recipes }}>

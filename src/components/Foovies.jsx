@@ -8,7 +8,7 @@ import { HorrorComedyContext } from "../context/HorrorComedyContext";
 export default function Foovies() {
   const { recipes } = useContext(ApiContext);
   const foovies = recipes.filter(
-    (foovie) => foovie.sys.contentType.sys.id === "foovie"
+    (foovie) => foovie.categ === 2
   );
   const { isComedyTheme, comedy, horror, toggleTheme } =
     useContext(HorrorComedyContext);
@@ -19,19 +19,19 @@ export default function Foovies() {
     <div className={styles.categoryHero}>
       <h2 className={styles.title}>Foovies Recipes</h2>
       {foovies.map((recipe) => (
-        <div key={recipe.fields.title} className={styles.categoryContainer}>
-          <Link to={`/foovies/${recipe.fields.title}`}>
+        <div key={recipe.id} className={styles.categoryContainer}>
+          <Link to={`/foovies/${recipe.title}`}>
             <img
               className={styles.categoryImg}
-              src={recipe.fields.image.fields.file.url}
+              src={recipe.image}
               alt="recipe"
             />
           </Link>
           <div id={styles.foodTitleContainer}>
             <div id={styles.foodTitleContainerItem}
                  style={{ color: themeStyles.text, background: themeStyles.uiOne }}>
-              <h2 id={styles.nameOnCat}>{recipe.fields.title}</h2>
-              <p id={styles.fuguIndex}>{recipe.fields.comfyFugu}</p>
+              <h2 id={styles.nameOnCat}>{recipe.title}</h2>
+              <p id={styles.fuguIndex}>{recipe.fugu}</p>
             </div>
           </div>
         </div>
